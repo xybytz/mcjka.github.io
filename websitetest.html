@@ -1,39 +1,38 @@
-<!DOCTYPE html>
-<html>
-<body>
+<!DOCTYPE html> 
+<html> 
+<head> 
+	
+<style> 
+	.ad-zone{ 
+	height: 10px; 
+	} 
+</style> 
+	
+</head> 
+<body> 
+<h1> 
+	<center>GeeksforGeeks</center> 
+</h1> 
+<center> 
+	<p id="msg">checking for adblocker...</p> 
 
-<h2>What Can JavaScript Do?</h2>
-
-<p id="demo">JavaScript can change HTML content.</p>
-
-<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+</center> 
 
 <script>
-const adContainer = document.createElement('div');
-adContainer.id = 'dummyx-ad';
-adContainer.style.width = '300px';
-adContainer.style.height = '250px';
-adContainer.style.backgroundColor = 'lightgray';
-adContainer.style.border = '1px solid black';
-adContainer.style.display = 'flex';
-adContainer.style.justifyContent = 'center';
-adContainer.style.alignItems = 'center';
-adContainer.textContent = 'Dummy Ad';
-
-// Append the ad container to the body
-document.body.appendChild(adContainer);
-
-if (document.getElementById("dummy-ad")) {
- 	document.write("<p>hi</p>");
+let x = document.querySelector(".ad-zone"); 
+   let x_height = x.offsetHeight; 
+   let msg = document.getElementById("msg") 
+     
+   if(x_height){ 
+     msg.innerText = "No Adblocker detected"
+   } else{ 
+     msg.innerText = "Adblocker detected"
 }
-else {
-	document.write("<p>bad</p>");
-}
-
-
- 
 </script>
-
-</body>
+	
+<div
+	class="ad-zone ad-space ad-unit textads banner-ads banner_ads"> 
+</div> 
+	
+</body> 
 </html>
-
